@@ -3,20 +3,18 @@ namespace Domain.Entities;
 
 public class Card
 {
-    public Guid Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public string List { get; set; }
+    public Guid Id { get; private set; }
+    public string Title { get; private set; }
+    public string Description { get; private set; }
+    public string List { get; private set; }
 
-    public Card(string title, string description, string list, Guid? id)
+    public Card(string title, string description, string list)
     {
-        Id = (Guid)(id == null ? Guid.NewGuid() : id);
+        Id = Guid.NewGuid(); 
         Title = title;
         Description = description;
         List = list;
     }
-
-    public Card() { }
 
     public void Update(string title, string description, string list)
     {

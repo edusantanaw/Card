@@ -1,13 +1,19 @@
 using Domain.Usecases;
 using Domain.Entities;
+using Presentational.DTO;
 
 namespace Data.Usecases;
 
-public class CreateCardUsecase : ICreateUsecase<string, Card>
+public class CreateCardUsecase : ICreateUsecase<CreaeteCardDto, Card>
 {
-    public Card execute(string data)
+    public CreateCardUsecase()
     {
-        var card = new Card("Any", "Ant", "aaaa", null);
+
+    }
+
+    public Card execute(CreaeteCardDto data)
+    {
+        var card = new Card(data.title, data.description, data.list);
         return card;
     }
 }

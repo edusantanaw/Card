@@ -1,22 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
 using Domain.Usecases;
 using Domain.Entities;
+using Presentational.DTO;
 
-namespace Presentational.Controllers;
-
-[Route("/card")]
-[ApiController]
-public class CreateCardController : ControllerBase
+namespace Presentational.Controllers
 {
-    private ICreateUsecase<string, Card> CreateCardUsecase;
-    public CreateCardController([FromServices]ICreateUsecase<string, Card> createUsecase)
+
+    [Route("/card")]
+    [ApiController]
+    public class CreateCardController : ControllerBase
     {
-        CreateCardUsecase = createUsecase;
+        private ICreateUsecase<CreaeteCardDto, Card> CreateCardUsecase;
+        public CreateCardController([FromServices] ICreateUsecase<CreaeteCardDto, Card> createUsecase)
+        {
+            CreateCardUsecase = createUsecase;
+        }
+        [HttpPost]
+        public IActionResult Post(CreaeteCardDto cardDTO)
+        {
+            try
+            {
+                var card = CreateCardUsecase.execute(cardDTO);
+                return Created("card", card);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
     }
-    [HttpPost]
-    public IActionResult Post()
-    {
-        var card = CreateCardUsecase.execute("test");
-        return Ok(card);
-    }
-}
+};
