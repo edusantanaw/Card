@@ -3,11 +3,11 @@ using Domain.Entities;
 
 namespace Data.Usecases;
 
-public class CreateCardUsecase : ICreateUsecase<Card, Card>
+public class CreateCardUsecase : ICreateUsecase<string, Card>
 {
-    public Card execute(Card data)
+    public Card execute(string data)
     {
         var card = new Card("Any", "Ant", "aaaa", null);
-        throw new NotImplementedException();
+        return card;
     }
 }
