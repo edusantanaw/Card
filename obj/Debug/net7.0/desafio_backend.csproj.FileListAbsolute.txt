@@ -24,3 +24,14 @@ C:\Users\eduardo\Downloads\desafio_backend\obj\Debug\net7.0\refint\desafio_backe
 C:\Users\eduardo\Downloads\desafio_backend\obj\Debug\net7.0\desafio_backend.pdb
 C:\Users\eduardo\Downloads\desafio_backend\obj\Debug\net7.0\desafio_backend.genruntimeconfig.cache
 C:\Users\eduardo\Downloads\desafio_backend\obj\Debug\net7.0\ref\desafio_backend.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Humanizer.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Npgsql.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\eduardo\Downloads\desafio_backend\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\eduardo\Downloads\desafio_backend\obj\Debug\net7.0\desafio_backend.csproj.CopyComplete
