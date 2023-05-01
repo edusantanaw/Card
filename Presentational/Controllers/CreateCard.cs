@@ -5,7 +5,6 @@ using Presentational.DTO;
 
 namespace Presentational.Controllers
 {
-
     [Route("/card")]
     [ApiController]
     public class CreateCardController : ControllerBase
@@ -21,12 +20,18 @@ namespace Presentational.Controllers
             try
             {
                 var card = CreateCardUsecase.execute(cardDTO);
-                return Created("card", card);
+                return Ok(card);
             }
             catch (Exception error)
             {
-                return BadRequest(error);
+                return BadRequest(error.Data);
             }
+        }
+
+        [HttpGet()]
+        public IActionResult GetAll()
+        {
+            return Ok("result");
         }
     }
 };

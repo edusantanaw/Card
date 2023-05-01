@@ -1,9 +1,10 @@
 using Infra.Db;
 using Domain.Entities;
+using Data.Repository;
 
 namespace Infra.Repositorys
 {
-    public class CardRepository : ICardRepository
+    public class CardRepository : ICreateRepository<Card, Card>
     {
         private readonly CardDbContext _context;
         public CardRepository(CardDbContext context)
@@ -13,6 +14,8 @@ namespace Infra.Repositorys
 
         public Card Create(Card data)
         {
+            Console.WriteLine(data);
+            Console.WriteLine("db");
             _context.Cards.Add(data);
             _context.SaveChanges();
             return data;

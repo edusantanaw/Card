@@ -9,8 +9,8 @@ public class CreateCardUsecase : ICreateUsecase<CreaeteCardDto, Card>
 {
     private readonly ICreateRepository<Card, Card> _repository;
     public CreateCardUsecase(ICreateRepository<Card, Card> repository)
-    {
-
+    {   
+        _repository = repository;
     }
 
     public Card execute(CreaeteCardDto data)
