@@ -1,6 +1,5 @@
 namespace Domain.Entities;
 
-
 public class Card
 {
     public Guid Id { get; private set; }

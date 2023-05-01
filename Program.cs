@@ -25,12 +25,14 @@ namespace desafio_backend
 
         public static void registerServices(WebApplicationBuilder builder)
         {
-            string connectionDB = builder.Configuration.GetConnectionString("DBConnectionString");
+            string connectionDB = builder.Configuration.GetConnectionString("DBConnectionString")!;
             builder.Services.AddDbContext<CardDbContext>(o => o.UseNpgsql(connectionDB));
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<ICreateUsecase<CreaeteCardDto, Card>, CreateCardUsecase>();
+            builder.Services.AddScoped<IDeleteUsecase, DeleteCardUsecase>();
             builder.Services.AddScoped<ICreateRepository<Card, Card>, CardRepository>();
+            builder.Services.AddScoped<IDeleteRepository<Card>, CardRepository>();
         }
     }
 };

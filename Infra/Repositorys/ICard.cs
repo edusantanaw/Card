@@ -3,5 +3,5 @@ using Domain.Entities;
 
 namespace Infra.Repositorys
 {
-    public interface ICardRepository : ICreateRepository<Card, Card> { }
+    public interface ICardRepository : ICreateRepository<Card, Card>, IDeleteRepository<Card> { }
 }
